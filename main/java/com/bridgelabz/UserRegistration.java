@@ -13,12 +13,16 @@ public class UserRegistration {
         String lastName = scan.nextLine();
         System.out.println("Enter Email ID: ");
         String emailId = scan.next();
+        System.out.println("Enter Mobile Number: ");
+        String mobileNumber = scan.next();
         UserRegistration.firstNameValidator(firstName);
         System.out.println("First name is Valid ? " + checkValid(firstNameValidator(firstName)));
         UserRegistration.lastNameValidator(lastName);
         System.out.println("Last name is Valid ?" + checkValid(lastNameValidator(lastName)));
         UserRegistration.emailValidator(emailId);
         System.out.println("Email ID is Valid ?" + checkValid(emailValidator(emailId)));
+        UserRegistration.mobileNumberValidator(mobileNumber);
+        System.out.println("Mobile Number is valid ?");
     }
 
     public static String checkValid(Boolean validator) {
@@ -39,5 +43,9 @@ public class UserRegistration {
 
     public static boolean emailValidator(String email) {
         return email.matches("^[abc]2(.+){1}[A-Za-z]*+@{1}[bl](.+)[co](.+)[in]$");
+    }
+
+    private static boolean mobileNumberValidator(String mobileNumber) {
+        return mobileNumber.matches("^[9][1] [7-9][0-9]{9}$");
     }
 }
