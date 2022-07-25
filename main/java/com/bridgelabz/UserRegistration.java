@@ -30,6 +30,10 @@ public class UserRegistration {
     }
 
     public static boolean lastNameValidator(String lastName) {
-        return lastName.matches("[A-Z][a-z]{3,}");
+        return lastName.matches("^[A-Z][a-z]{2,}$");
+    }
+
+    public static boolean emailValidator(String email) {
+        return email.matches("^[abc]2(.+){1}[A-Za-z]*+@{1}[bl](.+)[co](.+)[in]$");
     }
 }
