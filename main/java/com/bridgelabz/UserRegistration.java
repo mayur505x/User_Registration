@@ -11,10 +11,14 @@ public class UserRegistration {
         String firstName = scan.nextLine();
         System.out.println("Enter a Last Name: ");
         String lastName = scan.nextLine();
+        System.out.println("Enter Email ID: ");
+        String emailId = scan.next();
         UserRegistration.firstNameValidator(firstName);
         System.out.println("First name is Valid ? " + checkValid(firstNameValidator(firstName)));
         UserRegistration.lastNameValidator(lastName);
         System.out.println("Last name is Valid ?" + checkValid(lastNameValidator(lastName)));
+        UserRegistration.emailValidator(emailId);
+        System.out.println("Email ID is Valid ?" + checkValid(emailValidator(emailId)));
     }
 
     public static String checkValid(Boolean validator) {
