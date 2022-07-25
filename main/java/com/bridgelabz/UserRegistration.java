@@ -55,6 +55,6 @@ public class UserRegistration {
     }
 
     public static boolean passwordValidator(String password) {
-        return password.matches("^[a-z]{8,}$");
+        return password.matches("^[A-Z]{1}[a-z]{7,}$");
     }
 }
